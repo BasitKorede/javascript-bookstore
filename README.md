@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Hello Microverse
+# AWSOME BOOK STORE
 
-> A basic hello microverse project to test our knowledege on the use of linters.
+> A basic Book Store app that help remove and add books in a book store .
 
 ## Built With
 
