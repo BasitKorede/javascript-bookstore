@@ -1,4 +1,11 @@
-body {
+div {
+  border-bottom: 2px solid black;
+  width: 20%;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* body {
   background-color: black;
 }
 
@@ -7,3 +14,13 @@ body {
   font-family: Metal Mania, "Times New Roman", Times, serif;
   text-align: center;
 }
+
+form {
+ display: grid;
+ width: 20%;
+ margin: auto; 
+}
+
+button {
+  
+} */
