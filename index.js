@@ -75,9 +75,25 @@ const initialBooks = [
   },
 ];
 
+const bookListElement = document.querySelector('ul.book-list');
+
 const bookStore = store(initialBooks);
 const books = bookStore.all();
 books.forEach((book) => {
-  const bookListElement = document.querySelector('ul.book-list');
   displayBook(book, bookListElement);
 });
+
+const generateId = () => `id_${Math.random().toString(36).slice(2)}`;
+
+const formElement = document.querySelector('#book-form');
+const handleSubmition = (event) => {
+  event.preventDefault();
+  const title = document.querySelector('.title-input').value;
+  const author = document.querySelector('.author-input').value;
+  const id = generateId();
+  const newBook = { title, author, id };
+  if (bookStore.add(newBook)) {
+    displayBook(newBook, bookListElement);
+  }
+};
+formElement.addEventListener('submit', handleSubmition);
