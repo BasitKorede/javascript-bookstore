@@ -45,4 +45,39 @@ const store = (initialData = []) => {
   };
 };
 
-store();
+// Display book function:
+// 1. accepts an object with {id, author, title}
+// 2. creates a li element and populates the objects with it
+// 3. query the ul element and appends the li to it
+const displayBook = ({ title, author, id }, parentElement) => {
+  const bookListItemElement = document.createElement('li');
+  bookListItemElement.className = 'book-list-item';
+  bookListItemElement.innerHTML = `
+      <section>
+        <h3>${title}</h3>
+        <p>${author}</p>
+        <button id="${id}" type="button">Remove</button>
+        </section>`;
+  parentElement.appendChild(bookListItemElement);
+};
+
+const initialBooks = [
+  {
+    title: 'the boy with wings',
+    author: 'Basit Korede',
+    id: 'first',
+  },
+
+  {
+    title: 'the boy with wings',
+    author: 'Basit Korede',
+    id: 'second',
+  },
+];
+
+const bookStore = store(initialBooks);
+const books = bookStore.all();
+books.forEach((book) => {
+  const bookListElement = document.querySelector('ul.book-list');
+  displayBook(book, bookListElement);
+});
