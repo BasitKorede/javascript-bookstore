@@ -7,9 +7,23 @@
 ## Built With
 
 - HTML
-- Frameworks
-- Technologies used
+- Semantic HTML
+- HTML Forms
 
+- Css
+- positioning
+- PSuedo Classes
+- Flexbox
+
+Javascrpit
+
+- Dom Manipulation and `EventListner` with handler functions
+- Named and anonymous arrow functions
+- Arrays and Object
+- Array manipulation with, `forEach`
+- Localstorage API
+- JSON.Parse
+- JSON.Stringify
 ## Live Demo (if available)
 
 [Live Demo Link](https://livedemo.com)
