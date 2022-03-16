@@ -6,6 +6,17 @@
 // 3. remove(id) - accepts an id and filter the existing store with the id.
 //  returns and persists the remaning data
 
+
+class Book {
+  constructor(title, author, id) {
+    this.title = title;
+    this.author = author;
+    this.id = id;
+  }
+  
+  
+}
+
 const store = (initialData = []) => {
   let books;
 
@@ -91,7 +102,7 @@ const handleSubmition = (event) => {
   const title = document.querySelector('.title-input').value;
   const author = document.querySelector('.author-input').value;
   const id = generateId();
-  const newBook = { title, author, id };
+  const newBook = new Book(title,author,id);
   if (bookStore.add(newBook)) {
     displayBook(newBook, bookListElement);
   }
