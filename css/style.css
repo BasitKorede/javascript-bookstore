@@ -15,6 +15,10 @@ div {
   text-align: center;
 }
 
+.book-list-item {
+  list-style: none;
+}
+
 form {
  display: grid;
  width: 20%;
