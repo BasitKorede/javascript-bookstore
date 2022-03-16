@@ -3,10 +3,12 @@ div {
   width: 20%;
   padding: 10px;
   margin-bottom: 20px;
+  margin: 0 auto;
 }
 
 .book-list {
   width: 40%;
+  padding: 0;
 }
 
 .book-list-item {
