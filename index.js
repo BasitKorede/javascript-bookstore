@@ -56,22 +56,24 @@ const displayBook = ({ title, author, id }, parentElement) => {
       <section>
         <h3>${title}</h3>
         <p>${author}</p>
-        <button id="${id}" type="button">Remove</button>
+        <button id="${id}" type="button" onclick="handleRemove('${id}')" class="remove-button">Remove</button>
         </section>`;
   parentElement.appendChild(bookListItemElement);
 };
+
+const generateId = () => `id_${Math.random().toString(36).slice(2)}`;
 
 const initialBooks = [
   {
     title: 'the boy with wings',
     author: 'Basit Korede',
-    id: 'first',
+    id: generateId(),
   },
 
   {
-    title: 'the boy with wings',
-    author: 'Basit Korede',
-    id: 'second',
+    title: 'Think Pythone',
+    author: 'korede Basit',
+    id: generateId(),
   },
 ];
 
@@ -82,8 +84,6 @@ const books = bookStore.all();
 books.forEach((book) => {
   displayBook(book, bookListElement);
 });
-
-const generateId = () => `id_${Math.random().toString(36).slice(2)}`;
 
 const formElement = document.querySelector('#book-form');
 const handleSubmition = (event) => {
@@ -97,3 +97,11 @@ const handleSubmition = (event) => {
   }
 };
 formElement.addEventListener('submit', handleSubmition);
+
+// eslint-disable-next-line no-unused-vars
+const handleRemove = (currentId) => {
+  if (bookStore.remove(currentId)) {
+    const removeButton = document.getElementById(currentId);
+    removeButton.parentElement.parentElement.remove();
+  }
+};
