@@ -5,9 +5,14 @@ div {
   margin-bottom: 20px;
 }
 
+.book-list {
+  width: 40%;
+}
+
 .book-list-item {
   list-style: none;
   border-bottom: 1px solid #000;
+  padding-bottom: 8px;
 }
 
 /* body {
