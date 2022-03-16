@@ -5,6 +5,11 @@ div {
   margin-bottom: 20px;
 }
 
+.book-list-item {
+  list-style: none;
+  border-bottom: 1px solid #000;
+}
+
 /* body {
   background-color: black;
 }
@@ -13,10 +18,6 @@ div {
   color: wheat;
   font-family: Metal Mania, "Times New Roman", Times, serif;
   text-align: center;
-}
-
-.book-list-item {
-  list-style: none;
 }
 
 form {
