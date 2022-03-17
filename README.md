@@ -5,10 +5,24 @@
 > A basic Book Store app that help remove and add books in a book store .
 
 ## Built With
-
-- HTML
 - Semantic HTML
 - HTML Forms
+
+- Css
+- positioning
+- PSuedo Classes
+- Flexbox
+
+Javascrpit
+
+- Dom Manipulation and `EventListner` with handler functions
+- Named and anonymous arrow functions
+- Arrays and Object
+- Array manipulation with, `forEach`
+- Localstorage API
+- JSON.Parse
+- JSON.Stringify
+- Javascript Classes and Methods
 
 - Css
 - positioning
