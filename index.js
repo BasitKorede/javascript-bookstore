@@ -1,50 +1,33 @@
-const listLink = document.getElementById("list");
-const formLink = document.getElementById("add-new");
-const contactLink = document.getElementById("contact");
+/* eslint-disable max-classes-per-file */
 
-const list = document.getElementById("list-section");
-const formSection = document.getElementById("add-new-section");
-const contactSection = document.getElementById("contact-section");
+const listLink = document.getElementById('list');
+const formLink = document.getElementById('add-new');
+const contactLink = document.getElementById('contact');
 
+const list = document.getElementById('list-section');
+const formSection = document.getElementById('add-new-section');
+const contactSection = document.getElementById('contact-section');
 
-formSection.style.display = "none";
-contactSection.style.display = "none";
+formSection.style.display = 'none';
+contactSection.style.display = 'none';
 
+listLink.addEventListener('click', () => {
+  formSection.style.display = 'none';
+  contactSection.style.display = 'none';
+  list.style.display = 'block';
+});
 
-listLink.addEventListener("click", () => {
-  formSection.style.display = "none";
-  contactSection.style.display = "none";
-  list.style.display = "block";
-})
+formLink.addEventListener('click', () => {
+  formSection.style.display = 'block';
+  contactSection.style.display = 'none';
+  list.style.display = 'none';
+});
 
-formLink.addEventListener("click", () => {
-  formSection.style.display = "block";
-  contactSection.style.display = "none";
-  list.style.display = "none";
-})
-
-contactLink.addEventListener("click", () => {
-  formSection.style.display = "none";
-  contactSection.style.display = "block";
-  list.style.display = "none";
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+contactLink.addEventListener('click', () => {
+  formSection.style.display = 'none';
+  contactSection.style.display = 'block';
+  list.style.display = 'none';
+});
 
 // eslint-disable-next-line max-classes-per-file
 class Book {
@@ -141,9 +124,9 @@ const handleSubmition = (event) => {
   const title = document.querySelector('.title-input').value;
   const author = document.querySelector('.author-input').value;
   const id = generateId();
-  let clearField = document.querySelectorAll("input");
-  clearField.forEach(input => {
-  input.value = '';
+  const clearField = document.querySelectorAll('input');
+  clearField.forEach((input) => {
+    input.value = '';
   });
   const newBook = new Book({ title, author, id });
   if (bookStore.add(newBook)) {
