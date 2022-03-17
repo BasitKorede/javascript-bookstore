@@ -38,7 +38,6 @@ nav {
   justify-content: flex-end;
   margin-top: 6px;
   padding-right: 7px;
-
 }
 
 .list-style {
@@ -74,7 +73,7 @@ nav {
   margin-bottom: 8px;
 }
 
-#form-heading{
+#form-heading {
   margin-bottom: 50px;
 }
 
@@ -85,7 +84,8 @@ nav {
   padding: 6px;
 }
 
-.contacts-section, h2 {
+.contacts-section,
+h2 {
   width: fit-content;
   margin: auto;
 }
@@ -98,8 +98,6 @@ footer {
   font-size: 17px;
   font-weight: bold;
 }
-
-
 
 .container {
   padding: 20px;
@@ -148,43 +146,3 @@ button {
 button:hover {
   box-shadow: initial;
 }
-<<<<<<< HEAD
-=======
-
-.form {
-  display: flex;
-  width: 60%;
-  text-align: center;
-  flex-direction: column;
-  margin: 0 auto;
-}
-
-.form input {
-  width: 100%;
-  padding: 4px;
-  outline: auto;
-  margin-bottom: 8px;
-}
-
-.add-button {
-  width: 16%;
-  align-self: flex-end;
-}
-
-.nav-list-item {
-  cursor: pointer;
-  list-style-type: none;
-}
-
-.nav-list-item.active {
-  color: #00f;
-}
-
-.section {
-  display: none;
-}
-
-.section.active {
-  display: block;
-}
->>>>>>> 03287656269db6afb964fb82f9fc932355cd528d
