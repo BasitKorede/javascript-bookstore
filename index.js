@@ -6,15 +6,12 @@
 // 3. remove(id) - accepts an id and filter the existing store with the id.
 //  returns and persists the remaning data
 
-
 class Book {
   constructor(title, author, id) {
     this.title = title;
     this.author = author;
     this.id = id;
   }
-  
-  
 }
 
 const store = (initialData = []) => {
@@ -64,9 +61,11 @@ const displayBook = ({ title, author, id }, parentElement) => {
   const bookListItemElement = document.createElement('li');
   bookListItemElement.className = 'book-list-item';
   bookListItemElement.innerHTML = `
-      <section>
+      <section class="book-store-section display-flex">
+      <div class="display-flex">
         <h3>${title}</h3>
-        <p>${author}</p>
+        <p class="paragraph">${author}</p>
+        </div>
         <button id="${id}" type="button" onclick="handleRemove('${id}')" class="remove-button">Remove</button>
         </section>`;
   parentElement.appendChild(bookListItemElement);
@@ -102,7 +101,7 @@ const handleSubmition = (event) => {
   const title = document.querySelector('.title-input').value;
   const author = document.querySelector('.author-input').value;
   const id = generateId();
-  const newBook = new Book(title,author,id);
+  const newBook = new Book(title, author, id);
   if (bookStore.add(newBook)) {
     displayBook(newBook, bookListElement);
   }

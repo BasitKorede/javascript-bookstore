@@ -1,18 +1,42 @@
 .container {
-  width: 40%;
   padding: 20px;
   margin: 0 auto;
 }
 
 .book-list {
   padding: 0;
+  width: 100%;
 }
 
 .book-list-item {
   list-style: none;
   border-bottom: 1px solid #000;
-  padding-bottom: 8px;
+  background-color: lightslategrey;
+  margin: 23px 0;
+  padding: 0 12px;
+  h
+
 }
+
+.display-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+.paragraph {
+  margin-left: 12px;
+}
+
+.remove-button {
+  width: 10%;
+  height: 4%;
+}
+
 
 /* body {
   background-color: black;
