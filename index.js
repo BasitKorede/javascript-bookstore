@@ -1,60 +1,48 @@
-// the store function accepts an optional array as initialData,
-// persist the data using the localStorage API
-// and returns the three methods below:
-// 1. all() - returns an array of all objects in the store
-// 2. add(newDAta) - accepts an object and stores it to the store persitted by the localstorage API
-// 3. remove(id) - accepts an id and filter the existing store with the id.
-//  returns and persists the remaning data
-
-
+// eslint-disable-next-line max-classes-per-file
 class Book {
-  constructor(title, author, id) {
+  constructor({ title, author, id }) {
     this.title = title;
     this.author = author;
     this.id = id;
   }
-  
-  
 }
 
-const store = (initialData = []) => {
-  let books;
+class BookStore {
+  constructor(initialData = []) {
+    this.saveToLocalStorage = (data) => {
+      const booksString = JSON.stringify(data);
+      localStorage.setItem('bookStoreData', booksString);
+      return true;
+    };
 
-  const saveToLocalStorage = (data) => {
-    const booksString = JSON.stringify(data);
-    localStorage.setItem('bookStoreData', booksString);
-    return true;
-  };
-
-  const rawBooksData = localStorage.getItem('bookStoreData');
-  if (rawBooksData) {
-    books = JSON.parse(rawBooksData);
-  } else {
-    books = initialData;
-    saveToLocalStorage(books);
+    const rawBooksData = localStorage.getItem('bookStoreData');
+    if (rawBooksData) {
+      this.books = JSON.parse(rawBooksData);
+    } else {
+      this.books = initialData;
+      this.saveToLocalStorage(this.books);
+    }
   }
 
-  const all = () => books;
+  all() {
+    return this.books;
+  }
 
-  const add = (newData) => {
+  add(newData) {
     if (!newData || !newData.id) {
       return false;
     }
-    books.push(newData);
-    return saveToLocalStorage(books);
-  };
 
-  const remove = (id) => {
-    books = books.filter((book) => book.id !== id);
-    return saveToLocalStorage(books);
-  };
+    const newBook = new Book(newData);
+    this.books.push(newBook);
+    return this.saveToLocalStorage(this.books);
+  }
 
-  return {
-    all,
-    add,
-    remove,
-  };
-};
+  remove(id) {
+    this.books = this.books.filter((book) => book.id !== id);
+    return this.saveToLocalStorage(this.books);
+  }
+}
 
 // Display book function:
 // 1. accepts an object with {id, author, title}
@@ -90,7 +78,7 @@ const initialBooks = [
 
 const bookListElement = document.querySelector('ul.book-list');
 
-const bookStore = store(initialBooks);
+const bookStore = new BookStore(initialBooks);
 const books = bookStore.all();
 books.forEach((book) => {
   displayBook(book, bookListElement);
@@ -102,7 +90,7 @@ const handleSubmition = (event) => {
   const title = document.querySelector('.title-input').value;
   const author = document.querySelector('.author-input').value;
   const id = generateId();
-  const newBook = new Book(title,author,id);
+  const newBook = new Book({ title, author, id });
   if (bookStore.add(newBook)) {
     displayBook(newBook, bookListElement);
   }
