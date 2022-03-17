@@ -148,3 +148,43 @@ button {
 button:hover {
   box-shadow: initial;
 }
+<<<<<<< HEAD
+=======
+
+.form {
+  display: flex;
+  width: 60%;
+  text-align: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.form input {
+  width: 100%;
+  padding: 4px;
+  outline: auto;
+  margin-bottom: 8px;
+}
+
+.add-button {
+  width: 16%;
+  align-self: flex-end;
+}
+
+.nav-list-item {
+  cursor: pointer;
+  list-style-type: none;
+}
+
+.nav-list-item.active {
+  color: #00f;
+}
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+>>>>>>> 03287656269db6afb964fb82f9fc932355cd528d
