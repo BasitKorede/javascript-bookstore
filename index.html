@@ -8,15 +8,17 @@
     <title>Book store</title>
   </head>
   <body>
-    <nav>
+    <nav class="b">
       <h1>Awesome Books</h1>
-      <ul>
-        <li class="links" id="list">List</li>
-        <li class="links" id="add-new">Add New</li>
-        <li class="links" id="contact">Contact</li>
+      <ul class="list-style nav-items">
+        <li class="links" id="list"><strong>List</strong></li>
+        <div class="line"></div>
+        <li class="links" id="add-new"><strong>Add New</strong></li>
+        <div class="line"></div>
+        <li class="links" id="contact"><strong>Contact</strong></li>
       </ul>
     </nav>
-    <div>
+    <div class="time">
       <time id="current-time" datetime="2022-03-19T09:25:32.929">
         March 19th 2022, 9:32 AM
       </time>
@@ -27,8 +29,8 @@
         <ul class="book-list"></ul>
       </section>
 
-      <section class="section" id="add-new-section">
-        <h2>Add a new book</h2>
+      <section class="form-section" id="add-new-section">
+        <h2 id="form-heading">Add a new book</h2>
         <form id="book-form" class="form">
           <input
             type="text"
@@ -47,11 +49,19 @@
           <button type="submit" class="add-button">Add</button>
         </form>
       </section>
-      <section class="section" id="contact-section">
-        <h2>Contact information</h2>
+      <section class="contacts-section" id="contact-section">
+        <h2>Contact Information</h2>
+        <br>
+        <br>
+        <p class="bold">Do you have any questions or you just want to say hello you can reach out to us</p>
+        <ul>
+          <li class="bold">Our email: mail@mail.com</li>
+          <li class="bold">Our phone number: (555) 4363567342644</li>
+          <li class="bold">Our address: 54th kingston street, Arizona</li>
+        </ul>
       </section>
     </main>
-    <footer></footer>
+    <footer class="b">CopyRight...</footer>
     <script src="index.js"></script>
   </body>
 </html>
