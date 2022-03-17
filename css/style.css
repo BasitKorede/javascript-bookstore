@@ -10,12 +10,22 @@
 
 .book-list-item {
   list-style: none;
-  border-bottom: 1px solid #000;
-  background-color: lightslategrey;
-  margin: 23px 0;
-  padding: 0 12px;
-  h
+  background-color: darkgray;
+  padding: 6px 12px;
+}
 
+h3 {
+  padding: 0;
+  margin: 0;
+}
+
+.paragraph {
+  padding: 0;
+  margin: 0;
+}
+
+.book-list-item:nth-child(2n) {
+  background-color: #fff;
 }
 
 .display-flex {
@@ -26,34 +36,27 @@
 
 button {
   cursor: pointer;
-}
-
-.paragraph {
-  margin-left: 12px;
-}
-
-.remove-button {
+  border: 2px solid;
+  box-shadow: 2px 2px 2px 2px #000;
   width: 10%;
   height: 4%;
 }
 
-
-/* body {
-  background-color: black;
-}
-
-.header {
-  color: wheat;
-  font-family: Metal Mania, "Times New Roman", Times, serif;
+.form {
+  display: flex;
+  width: 60%;
   text-align: center;
+  flex-direction: column;
+  margin: 0 auto;
 }
 
-form {
- display: grid;
- width: 20%;
- margin: auto; 
+.form input {
+  width: 100%;
+  padding: 4px;
+  outline: auto;
 }
 
-button {
-  
-} */
+.add-button {
+  width: 16%;
+  align-self: flex-end;
+}
