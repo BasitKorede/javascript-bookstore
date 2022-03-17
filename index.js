@@ -111,12 +111,15 @@ const handleRemove = (currentId) => {
 const navigatePage = () => {
   const navLists = document.querySelectorAll('.nav-list-item');
   const handleNavigation = (event) => {
+    //
     if (event.target.classList.contains('active')) {
       return false;
     }
 
     document.querySelector('.nav-list-item.active').classList.remove('active');
     event.target.classList.add('active');
+    document.querySelector('section.active').classList.remove('active');
+    document.querySelector(`#${event.target.id}-section`).classList.add('active');
     return true;
   };
 
