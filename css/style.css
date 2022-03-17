@@ -65,3 +65,20 @@ button:hover {
   width: 16%;
   align-self: flex-end;
 }
+
+.nav-list-item {
+  cursor: pointer;
+  list-style-type: none;
+}
+
+.nav-list-item.active {
+  color: #00f;
+}
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
