@@ -8,19 +8,50 @@
     <title>Book store</title>
   </head>
   <body>
-    <div class="container">
-      <h1>AWESOME BOOKS</h1>
-
-    <ul class="book-list">
-    </ul>
-    
-    <form id="book-form" class="form" >
-      <input type="text" class="title-input" placeholder="Title" minlength="2" required>
-      <input type="text" class="author-input" placeholder="Author" minlength="2" required>
-      <button type="submit" class="add-button">Add</button>
-    </form>
+    <nav>
+      <h1>Awesome Books</h1>
+      <ul>
+        <li class="links" id="list">List</li>
+        <li class="links" id="add-new">Add New</li>
+        <li class="links" id="contact">Contact</li>
+      </ul>
+    </nav>
+    <div>
+      <time id="current-time" datetime="2022-03-19T09:25:32.929">
+        March 19th 2022, 9:32 AM
+      </time>
     </div>
+    <main class="container">
+      <section class="active-section" id="list-section">
+        <h2>All awesome books</h2>
+        <ul class="book-list"></ul>
+      </section>
+
+      <section class="section" id="add-new-section">
+        <h2>Add a new book</h2>
+        <form id="book-form" class="form">
+          <input
+            type="text"
+            class="title-input"
+            placeholder="Title"
+            minlength="2"
+            required
+          />
+          <input
+            type="text"
+            class="author-input"
+            placeholder="Author"
+            minlength="2"
+            required
+          />
+          <button type="submit" class="add-button">Add</button>
+        </form>
+      </section>
+      <section class="section" id="contact-section">
+        <h2>Contact information</h2>
+      </section>
+    </main>
+    <footer></footer>
     <script src="index.js"></script>
   </body>
 </html>
-
