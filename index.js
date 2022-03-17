@@ -52,9 +52,11 @@ const displayBook = ({ title, author, id }, parentElement) => {
   const bookListItemElement = document.createElement('li');
   bookListItemElement.className = 'book-list-item';
   bookListItemElement.innerHTML = `
-      <section>
+      <section class="book-store-section display-flex">
+      <div class="display-flex">
         <h3>${title}</h3>
-        <p>${author}</p>
+        <p class="paragraph">${author}</p>
+        </div>
         <button id="${id}" type="button" onclick="handleRemove('${id}')" class="remove-button">Remove</button>
         </section>`;
   parentElement.appendChild(bookListItemElement);
