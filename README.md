@@ -22,6 +22,7 @@ Javascrpit
 - Localstorage API
 - JSON.Parse
 - JSON.Stringify
+- Javascript Classes and Methods
 
 ## Live Demo (if available)
 
