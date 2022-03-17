@@ -1,9 +1,15 @@
-body {
-  background-color: black;
+.container {
+  width: 40%;
+  padding: 20px;
+  margin: 0 auto;
 }
 
-.header {
-  color: wheat;
-  font-family: Metal Mania, "Times New Roman", Times, serif;
-  text-align: center;
+.book-list {
+  padding: 0;
+}
+
+.book-list-item {
+  list-style: none;
+  border-bottom: 1px solid #000;
+  padding-bottom: 8px;
 }
